@@ -1,0 +1,22 @@
+version: '3'
+services:
+  host-a:
+    container_name: host-a
+    image: edugarrick/centos-8
+    privileged: true
+  host-b:
+    container_name: host-b
+    image: edugarrick/centos-8
+    privileged: true
+  attacker:
+    container_name: attacker
+    image: edugarrick/centos-8-python
+    privileged: true
+    volumes:
+      - ./src:/home/app
+  kali:
+    container_name: kali
+    image: lukaszlach/kali-desktop:xfce-top10
+    privileged: true
+    ports:
+      - "6080:6080"
