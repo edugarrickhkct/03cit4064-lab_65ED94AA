@@ -2,11 +2,11 @@ version: '3'
 services:
   host-a:
     container_name: host-a
-    image: edugarrick/centos-8
+    image: edugarrick/centos-8-python
     privileged: true
   host-b:
     container_name: host-b
-    image: edugarrick/centos-8
+    image: edugarrick/centos-8-python
     privileged: true
   attacker:
     container_name: attacker
